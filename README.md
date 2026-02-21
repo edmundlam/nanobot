@@ -12,6 +12,17 @@
   </p>
 </div>
 
+## 📝 Local Changes
+
+This fork tracks local modifications from the upstream [nanobot](https://github.com/HKUDS/nanobot) repository.
+
+**2026-02-20**
+- Migrate to `uv` package manager from pip
+- Add Makefile with common development commands (`make install`, `make test`, etc.)
+- Add `CLAUDE.md` with development guidelines for Claude Code
+
+---
+
 🐈 **nanobot** is an **ultra-lightweight** personal AI assistant inspired by [OpenClaw](https://github.com/openclaw/openclaw) 
 
 ⚡️ Delivers core agent functionality in just **~4,000** lines of code — **99% smaller** than Clawdbot's 430k+ lines.

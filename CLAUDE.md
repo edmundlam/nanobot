@@ -2,6 +2,21 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Commit Workflow
+
+**Before committing any changes**, update the `README.md` "📝 Local Changes" section to document what was modified. This fork tracks all local deviations from upstream.
+
+1. Make your changes
+2. Update `README.md` "📝 Local Changes" section with a new entry (reverse chronological order)
+3. Commit both your changes and the README update together
+
+Example entry format:
+```markdown
+**YYYY-MM-DD**
+- Brief description of change
+- Another related change
+```
+
 ## Project Overview
 
 nanobot is an ultra-lightweight personal AI assistant (~4,000 lines of core code) that provides multi-channel chatbot functionality with LLM integration. It supports multiple chat platforms (Telegram, Discord, WhatsApp, Slack, Email, Feishu, QQ, DingTalk, Mochat) and multiple LLM providers (OpenRouter, Anthropic, OpenAI, DeepSeek, Gemini, etc.).
