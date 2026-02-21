@@ -12,21 +12,45 @@ nanobot is an ultra-lightweight personal AI assistant (~4,000 lines of core code
 
 ### Installation & Setup
 ```bash
-# Install in development mode (recommended)
-pip install -e .
+# Install dependencies (uses uv package manager)
+make install
+
+# Install with development tools
+make install-dev
+
+# Alternative: Using uv directly
+uv sync              # Install with dev dependencies
+uv sync --no-dev     # Install runtime dependencies only
 
 # Initialize config and workspace
 nanobot onboard
 
 # Run tests
-pytest
+make test
+# Or: uv run pytest
 
 # Run a specific test
-pytest tests/test_commands.py::test_onboard_fresh_install
+uv run pytest tests/test_commands.py::test_onboard_fresh_install
 
 # Linting
-ruff check nanobot/
-ruff format nanobot/
+make lint
+make format
+# Or: uv run ruff check nanobot/
+#     uv run ruff format nanobot/
+```
+
+### Available Make Commands
+```bash
+make install        # Install runtime dependencies
+make install-dev    # Install with dev tools (pytest, ruff)
+make update         # Update dependencies to latest compatible versions
+make clean          # Remove virtual environment and lock file
+make test           # Run tests
+make lint           # Run ruff linting
+make format         # Format code with ruff
+make shell          # Spawn shell in virtual environment
+make run CMD="..."  # Run a command in the virtual environment
+make help           # Show all available commands
 ```
 
 ### Running the Application
