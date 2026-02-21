@@ -1,5 +1,6 @@
 .assets
 .env
+.claude/settings.local.json
 *.pyc
 dist/
 build/
